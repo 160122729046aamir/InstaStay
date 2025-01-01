@@ -93,10 +93,6 @@ app.listen(Port, () => {
     console.log(`App is listening at port ${Port}`);
 });
 
-app.get('/', (req, res) => {
-    res.send("Hi! I'm root");
-});
-
 // Catch-all for unmatched routes
 app.use((req, res, next) => {
     next(new ExpressError(404, `Route ${req.originalUrl} Not Found`));
