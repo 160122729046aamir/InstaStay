@@ -1,0 +1,121 @@
+<body>
+  <% layout('/layouts/boilerplate.ejs') -%>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5 col-lg-6 col-sm-8 offset-2">
+      <h1>Enter The Form:</h1>
+        <form action="/listings/create" method="post" class="needs-validation" novalidate enctype="multipart/form-data">
+          <div class="mb-3">
+            <label for="title" class="form-label">Title: </label>
+            <input
+              type="text"
+              name="listing[title]"
+              id="title"
+              class="form-control"
+              required
+            />
+            <div class="invalid-feedback">
+              Title is required
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="description" class="form-label">Description:</label>
+            <textarea
+              type="text"
+              name="listing[description]"
+              class="form-control"
+              id="description"
+              required
+            ></textarea>
+            <div class="invalid-feedback">
+              Description is required
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="image" class="form-label">Image URL:</label>
+            <input
+              type="file"
+              name="listing[image]"
+              id="image"
+              class="form-control"
+              required
+            />
+          </div>
+
+          <div class="row">
+              <div class="col-md-6 col-12 col-lg-4 mb-3">
+                  <label for="price" class="form-label">Price:</label>
+                  <input
+                    type="text"
+                    name="listing[price]"
+                    id="price"
+                    class="form-control"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Price is required
+                  </div>
+                </div>
+    
+                <div class="col-md-6 col-12 col-lg-8 mb-3">
+                  <label for="country" class="form-label">Country:</label>
+                  <input
+                    type="text"
+                    name="listing[country]"
+                    id="country"
+                    class="form-control"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Country is required
+                  </div>
+                </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="location" class="form-label">Location:</label>
+            <input
+              type="text"
+              name="listing[location]"
+              id="location"
+              class="form-control"
+              required
+            />
+            <div class="invalid-feedback">
+              Location is required
+            </div>
+          </div>
+
+          <!-- Category dropdown -->
+          <div class="mb-3">
+            <label for="category" class="form-label">Category:</label>
+            <select
+              name="listing[category]"
+              id="category"
+              class="form-control"
+              required
+            >
+              <option value="" disabled selected>Select a category</option>
+              <option value="Amazing Views">Amazing Views</option>
+              <option value="Farms">Farms</option>
+              <option value="Rooms">Rooms</option>
+              <option value="Arctic">Arctic</option>
+              <option value="Top Cities">Top Cities</option>
+              <option value="Amazing Pools">Amazing Pools</option>
+              <option value="Castles">Castles</option>
+              <option value="Bed & Breakfasts">Bed & Breakfasts</option>
+              <option value="Mountain Haven">Mountain Haven</option>
+              <option value="Vista Mansions">Vista Mansions</option>
+            </select>
+            <div class="invalid-feedback">
+              Category is required
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary create-btn">Add</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>

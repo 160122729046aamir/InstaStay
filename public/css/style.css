@@ -1,0 +1,120 @@
+body{
+    font-family: "Montserrat", serif, "Open Sans", sans-serif !important;
+    font-optical-sizing: auto !important;
+    font-weight: 450 !important;
+    font-style: normal !important;
+    display:flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container{
+    flex:1;
+}
+
+.navbar{
+    background-color: #ffffff;
+}
+
+.fa-sharp{
+    font-size: 2rem;
+    color: #B03052;
+}
+
+.nav-item{
+    font-weight: 700;
+    color: black !important;
+}
+
+.navbar-brand{
+    font-weight: 700;
+    color: #B03052 !important;
+}
+
+.special_card{
+    border: none !important;
+    
+}
+
+.card:hover{
+    opacity: 0.7;  
+}
+
+.show-card-link{
+    text-decoration: none;
+}
+
+.card img{
+    height:20rem;
+    border-radius: 1.5rem;
+}
+
+.create-btn{
+    border:none;
+    background-color: red;
+    border-radius: 0.5rem;
+}
+
+.edit-btn{
+    border:none;
+    background-color: red;
+    border-radius: 0.5rem; 
+}
+
+.show-card:hover{
+    opacity: 1;
+}
+
+.btn-edit,.btn-delete{
+    border:none;
+    background-color: red ;
+    border-radius: 0.5rem; 
+}
+
+.footer-container{
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: space-between;
+    height: 3rem;
+    
+}
+
+.left-footer{
+    margin-left:12px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.right-footer{
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-icons{
+    font-size: 1.25rem;
+}
+
+.footer-icon-atag{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-links{
+    text-decoration: none;
+    color: black;
+}
+
+.footer-links:hover{
+    text-decoration: underline;
+}
+
+.edit-img-tag{
+    height: 200px;
+}
+.gst{
+    display: none;
+};

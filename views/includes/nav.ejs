@@ -1,0 +1,206 @@
+<style>
+  a{
+    text-decoration: none;
+  }
+  .nav-search-input{
+    border-radius: 25px;
+  }
+  .nav-search-btn{
+    border-radius: 25px;
+    padding-left:2rem;
+    padding-right:2rem;
+    display: flex;
+    align-items: center;
+    gap:12px;
+    align-self: center;
+    height: 2.2rem;
+  }
+
+  .container-fluid-1{
+    margin-bottom: 0.5rem;
+  }
+  .search-box{
+    margin-left:18rem;
+  }
+  .filters {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+  }
+  .filter {
+    opacity: 0.5;
+    color: black;
+  }
+  .filter:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+  .text-nav {
+    font-size: 0.75rem;
+  }
+  .second-icon {
+    text-align: center;
+    font-size: 1.35rem;
+    margin-bottom: 0.5rem;
+  }
+  .display-switch {
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 0.75rem;
+    
+  }
+  .display-tax-switch:hover{
+     cursor: pointer;
+  }
+  .line {
+    height: 0.05rem;
+    width: 100%;
+    background-color: black;
+    opacity: 0.1;
+    margin-bottom: 0.75rem;
+  }
+  .filter-container {
+    margin-bottom: 0px;
+  }
+</style>
+<nav class="navbar navbar-expand-md flex flex-column bg-body-light sticky-top">
+  <div class="container-fluid container-fluid-1">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/listings"
+      ><i class="fa-solid fa-fire fa-sharp"></i
+    ></a>
+    <a class="navbar-brand" href="/listings">WanderLust</a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <div >
+        <form action="/listings/search" method="GET" class="d-grid gap-2 d-md-flex justify-content-md-end search-box">
+          <input type="text" class="form-control nav-search-input" name="searchQuery">
+          <button class="btn btn-danger nav-search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i><span>Search</span></button>
+        </form>
+      </div>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/listings/create">List a Place</a>
+        </li>
+        <% if (User) {%>
+        <li class="nav-item">
+          <a class="nav-link" href="/logout">Logout</a>
+        </li>
+        <% } else{%>
+        <li class="nav-item">
+          <a class="nav-link active" href="/signup">Signup</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/login">Login</a>
+        </li>
+        <% } %>
+      </ul>
+    </div>
+  </div>
+  <div class="line"></div>
+  <div class="container-fluid filter-container">
+    <div class="filters">
+      <a href="/listings/icons/Amazing Views"><div class="filter">
+        <div class="second-icon">
+          <i class="fa-solid fa-sun"></i>
+        </div>
+        <p class="text-nav">Amazing Views</p>
+      </div></a>
+      <a href="/listings/icons/Farms"><div class="filter">
+        <div class="second-icon">
+          <i class="fa-solid fa-cow"></i>
+        </div>
+        <p class="text-nav">Farms</p>
+      </div></a>
+      <a href="/listings/icons/Rooms"><div class="filter">
+        <div class="second-icon">
+          <i class="fa-solid fa-house"></i>
+        </div>
+        <p class="text-nav">Rooms</p>
+      </div></a>
+      <a href="/listings/icons/Arctic"><div class="filter">
+        <div class="second-icon">
+          <i class="fa-regular fa-snowflake"></i>
+        </div>
+        <p class="text-nav">Arctic</p>
+      </div></a>
+      <a href="/listings/icons/Top Cities"><div class="filter">
+        <div class="second-icon">
+          <i class="fa-solid fa-city"></i>
+        </div>
+        <p class="text-nav">Top Cities</p>
+      </div></a>
+      <a href="/listings/icons/Amazing Pools"><div class="filter">
+        <div class="second-icon">
+          <i class="fa-solid fa-person-swimming"></i>
+        </div>
+        <p class="text-nav">Amazing Pools</p>
+      </div></a>
+      <a href="/listings/icons/Castles"><div class="filter">
+        <div class="second-icon">
+          <i class="fa-brands fa-fort-awesome"></i>
+        </div>
+        <p class="text-nav">Castles</p>
+      </div></a>
+      <a href="/listings/icons/Bed & Breakfasts"><div class="filter">
+        <div class="second-icon">
+          <i class="fa-solid fa-mug-saucer"></i>
+        </div>
+        <p class="text-nav">Bed & Breakfasts</p>
+      </div></a>
+      <a href="/listings/icons/Mountain Haven"><div class="filter">
+        <div class="second-icon">
+          <i class="fa-solid fa-mountain-sun"></i>
+        </div>
+        <p class="text-nav">Mountain Haven</p>
+      </div></a>
+      <a href="/listings/icons/Vista Mansions"><div class="filter">
+        <div class="second-icon">
+          <i class="fa-solid fa-eye"></i>
+        </div>
+        <p class="text-nav">Vista Mansions</p>
+      </div></a>
+      <div class="display-switch">
+        <div class="d-flex align-items-center">
+          <label for="displayTotalSwitch" class="me-2 display-tax-switch"
+            >Display total before tasks</label
+          >
+          <div class="form-check form-switch">
+            <input
+              class="form-check-input display-tax-switch"
+              type="checkbox"
+              id="displayTotalSwitch"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<script>
+  const switchElement = document.getElementsByClassName("display-tax-switch");
+  const gstElement = document.getElementsByClassName("gst");
+  switchElement[1].addEventListener("click", () => {
+    if (gstElement && gstElement[0].style.display != "inline") {
+      for (singleElement of gstElement) {
+        singleElement.style.display = "inline";
+      }
+    } else {
+      for (singleElement of gstElement) {
+        singleElement.style.display = "none";
+      }
+    }
+  });
+</script>
