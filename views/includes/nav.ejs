@@ -1,26 +1,26 @@
 <style>
-  a{
+  a {
     text-decoration: none;
   }
-  .nav-search-input{
+  .nav-search-input {
     border-radius: 25px;
   }
-  .nav-search-btn{
+  .nav-search-btn {
     border-radius: 25px;
-    padding-left:2rem;
-    padding-right:2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     display: flex;
     align-items: center;
-    gap:12px;
+    gap: 12px;
     align-self: center;
     height: 2.2rem;
   }
 
-  .container-fluid-1{
+  .container-fluid-1 {
     margin-bottom: 0.5rem;
   }
-  .search-box{
-    margin-left:18rem;
+  .search-box {
+    margin-left: 18rem;
   }
   .filters {
     margin-left: auto;
@@ -49,11 +49,26 @@
   .display-switch {
     border: 2px solid black;
     border-radius: 10px;
-    padding: 0.75rem;
-    
+    padding: 0.5rem; /* Reduce padding */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center content */
+    width: auto; /* Let the width adjust based on content */
+    max-width: 150px; /* Limit maximum width */
+    font-size: 0.8rem; /* Reduce font size */
   }
-  .display-tax-switch:hover{
-     cursor: pointer;
+  .display-tax-switch{
+    margin-left: 0.5rem; 
+  }
+  @media (max-width: 767px) {
+  .display-switch {
+    max-width: 120px; /* Further reduce width on smaller screens */
+    padding: 0.3rem; /* Adjust padding on smaller screens */
+    font-size: 0.7rem; /* Reduce font size further */
+  }
+}
+  .display-tax-switch:hover {
+    cursor: pointer;
   }
   .line {
     height: 0.05rem;
@@ -84,10 +99,20 @@
     ></a>
     <a class="navbar-brand" href="/listings">WanderLust</a>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <div >
-        <form action="/listings/search" method="GET" class="d-grid gap-2 d-md-flex justify-content-md-end search-box">
-          <input type="text" class="form-control nav-search-input" name="searchQuery">
-          <button class="btn btn-danger nav-search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i><span>Search</span></button>
+      <div>
+        <form
+          action="/listings/search"
+          method="GET"
+          class="d-grid gap-2 d-md-flex justify-content-md-end search-box"
+        >
+          <input
+            type="text"
+            class="form-control nav-search-input"
+            name="searchQuery"
+          />
+          <button class="btn btn-danger nav-search-btn" type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i><span>Search</span>
+          </button>
         </form>
       </div>
       <ul class="navbar-nav ms-auto">
@@ -112,66 +137,86 @@
   <div class="line"></div>
   <div class="container-fluid filter-container">
     <div class="filters">
-      <a href="/listings/icons/Amazing Views"><div class="filter">
-        <div class="second-icon">
-          <i class="fa-solid fa-sun"></i>
-        </div>
-        <p class="text-nav">Amazing Views</p>
-      </div></a>
-      <a href="/listings/icons/Farms"><div class="filter">
-        <div class="second-icon">
-          <i class="fa-solid fa-cow"></i>
-        </div>
-        <p class="text-nav">Farms</p>
-      </div></a>
-      <a href="/listings/icons/Rooms"><div class="filter">
-        <div class="second-icon">
-          <i class="fa-solid fa-house"></i>
-        </div>
-        <p class="text-nav">Rooms</p>
-      </div></a>
-      <a href="/listings/icons/Arctic"><div class="filter">
-        <div class="second-icon">
-          <i class="fa-regular fa-snowflake"></i>
-        </div>
-        <p class="text-nav">Arctic</p>
-      </div></a>
-      <a href="/listings/icons/Top Cities"><div class="filter">
-        <div class="second-icon">
-          <i class="fa-solid fa-city"></i>
-        </div>
-        <p class="text-nav">Top Cities</p>
-      </div></a>
-      <a href="/listings/icons/Amazing Pools"><div class="filter">
-        <div class="second-icon">
-          <i class="fa-solid fa-person-swimming"></i>
-        </div>
-        <p class="text-nav">Amazing Pools</p>
-      </div></a>
-      <a href="/listings/icons/Castles"><div class="filter">
-        <div class="second-icon">
-          <i class="fa-brands fa-fort-awesome"></i>
-        </div>
-        <p class="text-nav">Castles</p>
-      </div></a>
-      <a href="/listings/icons/Bed & Breakfasts"><div class="filter">
-        <div class="second-icon">
-          <i class="fa-solid fa-mug-saucer"></i>
-        </div>
-        <p class="text-nav">Bed & Breakfasts</p>
-      </div></a>
-      <a href="/listings/icons/Mountain Haven"><div class="filter">
-        <div class="second-icon">
-          <i class="fa-solid fa-mountain-sun"></i>
-        </div>
-        <p class="text-nav">Mountain Haven</p>
-      </div></a>
-      <a href="/listings/icons/Vista Mansions"><div class="filter">
-        <div class="second-icon">
-          <i class="fa-solid fa-eye"></i>
-        </div>
-        <p class="text-nav">Vista Mansions</p>
-      </div></a>
+      <a href="/listings/icons/Amazing Views"
+        ><div class="filter">
+          <div class="second-icon">
+            <i class="fa-solid fa-sun"></i>
+          </div>
+          <p class="text-nav">Amazing Views</p>
+        </div></a
+      >
+      <a href="/listings/icons/Farms"
+        ><div class="filter">
+          <div class="second-icon">
+            <i class="fa-solid fa-cow"></i>
+          </div>
+          <p class="text-nav">Farms</p>
+        </div></a
+      >
+      <a href="/listings/icons/Rooms"
+        ><div class="filter">
+          <div class="second-icon">
+            <i class="fa-solid fa-house"></i>
+          </div>
+          <p class="text-nav">Rooms</p>
+        </div></a
+      >
+      <a href="/listings/icons/Arctic"
+        ><div class="filter">
+          <div class="second-icon">
+            <i class="fa-regular fa-snowflake"></i>
+          </div>
+          <p class="text-nav">Arctic</p>
+        </div></a
+      >
+      <a href="/listings/icons/Top Cities"
+        ><div class="filter">
+          <div class="second-icon">
+            <i class="fa-solid fa-city"></i>
+          </div>
+          <p class="text-nav">Top Cities</p>
+        </div></a
+      >
+      <a href="/listings/icons/Amazing Pools"
+        ><div class="filter">
+          <div class="second-icon">
+            <i class="fa-solid fa-person-swimming"></i>
+          </div>
+          <p class="text-nav">Amazing Pools</p>
+        </div></a
+      >
+      <a href="/listings/icons/Castles"
+        ><div class="filter">
+          <div class="second-icon">
+            <i class="fa-brands fa-fort-awesome"></i>
+          </div>
+          <p class="text-nav">Castles</p>
+        </div></a
+      >
+      <a href="/listings/icons/Bed & Breakfasts"
+        ><div class="filter">
+          <div class="second-icon">
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <p class="text-nav">Bed & Breakfasts</p>
+        </div></a
+      >
+      <a href="/listings/icons/Mountain Haven"
+        ><div class="filter">
+          <div class="second-icon">
+            <i class="fa-solid fa-mountain-sun"></i>
+          </div>
+          <p class="text-nav">Mountain Haven</p>
+        </div></a
+      >
+      <a href="/listings/icons/Vista Mansions"
+        ><div class="filter">
+          <div class="second-icon">
+            <i class="fa-solid fa-eye"></i>
+          </div>
+          <p class="text-nav">Vista Mansions</p>
+        </div></a
+      >
       <div class="display-switch">
         <div class="d-flex align-items-center">
           <label for="displayTotalSwitch" class="me-2 display-tax-switch"
