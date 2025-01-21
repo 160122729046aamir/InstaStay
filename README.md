@@ -51,11 +51,10 @@
 4. Set up environment variables:
    ```bash
    PORT=5000
-   JWT_SECRET=<Your_Strong_JWT_Secret>
-   MONGO_URI=<Your_MongoDB_Connection_String>
-   CLOUDINARY_CLOUD_NAME=<Your_Cloudinary_Cloud_Name>
-   CLOUDINARY_API_KEY=<Your_Cloudinary_API_Key>
-   CLOUDINARY_API_SECRET=<Your_Cloudinary_API_Secret>
+   MONGO_URL=<Your_MongoDB_Connection_String>
+   CLOUD_NAME=<Your_Cloudinary_Cloud_Name>
+   API_KEY=<Your_Cloudinary_API_Key>
+   API_SECRET=<Your_Cloudinary_API_Secret>
    SECRET=<Your_Secret_Password_Key>
 
 5. Start:
