@@ -1,2 +1,1 @@
-# WanderLust
-Similar to Airbnb
+# InstaStay
