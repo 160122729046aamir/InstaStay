@@ -33,4 +33,4 @@
 ### Steps
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/yourusername/instastay.git](https://github.com/160122729046aamir/InstaStay.git)
+   git clone https://github.com/160122729046aamir/InstaStay.git
