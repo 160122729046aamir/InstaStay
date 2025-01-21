@@ -50,7 +50,6 @@
    npm install
 4. Set up environment variables:
    ```bash
-   PORT=5000
    MONGO_URL=<Your_MongoDB_Connection_String>
    CLOUD_NAME=<Your_Cloudinary_Cloud_Name>
    API_KEY=<Your_Cloudinary_API_Key>
